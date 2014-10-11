@@ -56,11 +56,14 @@ var diceRoll = function () {
   };
 };
 
-var rollArray = [];
+var rollArray;
 
 var fiveRolls = function () {
+  rollArray = [];
   for (var count = 0; count < 5; count++) {
-  diceRoll();
+  var result = diceRoll();
+  rollArray.push(result);
   };
-  rollArray.push();
+  return rollArray;
 };
+fiveRolls()
